@@ -19,6 +19,7 @@
         "test": "../vendor/bin/phpunit"
     },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require-dev": {
         "laravel/legacy-factories": "1.x-dev"
     },
