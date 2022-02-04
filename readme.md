@@ -7,6 +7,11 @@ composer require decorate/qr_manager
 
 ### usage
 
+```php
+<?php
+use Decorate\QR_Manager;
+```
+
 #### QRコード表示
 ```php
 #controller
