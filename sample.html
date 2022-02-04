@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h4>QR Test</h4>
+        <div class="m-3 row">
+            <div class="col-6" style="background: #eeeeee;">
+                <div class="form-group">
+                    <label>id</label>
+                    <input class="form-control" id="id"/>
+                </div>
+                <div class="form-group">
+                    <label>name</label>
+                    <input class="form-control" id="name"/>
+                </div>
+                <div class="form-group">
+                    <label>email</label>
+                    <input class="form-control" id="email"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var words = '';
+    var scanning = false;
+    $(document).keypress(function(e) {
+        scanning = true;
+        if (e.charCode == 13) {
+            if (scanning) {
+                try {
+                    var obj = JSON.parse(words);
+                    setInput(obj);
+                } catch (e) {
+                    alert(words)
+                }
+                words = '';
+                scanning = false;
+            }
+            return;
+        }
+        if (scanning) {
+            var key = String.fromCharCode(e.charCode);
+            words = words + key;
+        }
+    });
+
+    function setInput(obj) {
+        console.log(obj)
+        $('#id').val(obj.id)
+        $('#name').val(obj.name)
+        $('#email').val(obj.email)
+    }
+</script>
+</html>
