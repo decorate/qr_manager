@@ -5,7 +5,8 @@
     "authors": [
         {
             "name": "mitu",
-            "email": "mitu2687sp@gmail.com"
+            "email": "mitu2687sp@gmail.com",
+            "homepage": "git@github.com:decorate/qr_manager.git"
         }
     ],
     "autoload": {
