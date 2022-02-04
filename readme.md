@@ -49,7 +49,7 @@ return $qr
 ### Class Methods
 |methods|args| output|
 |--|--|--|
-|source|Model|string|this|
+|source|Model or string|this|
 |format|string|this|
 |size|string|this|
 |show|null|HtmlString|
