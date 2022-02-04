@@ -1,0 +1,27 @@
+{
+    "name": "decorate/qr_manager",
+    "description": "qr code support",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mitu",
+            "email": "mitu2687sp@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Decorate\\": "src",
+            "QR_Maneger\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "../vendor/bin/phpunit"
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "laravel/legacy-factories": "1.x-dev"
+    },
+    "require": {
+        "simplesoftwareio/simple-qrcode": "dev-develop"
+    }
+}
