@@ -11,8 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Decorate\\": "src",
-            "QR_Maneger\\Test\\": "tests"
+            "Decorate\\": "src"
         }
     },
     "scripts": {
